@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Num Pad</title>
+    <link rel="stylesheet" href="numpad.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <center>
+        <div class="inputBoxes">
+          <input type="password" maxlength=1 id="1" />
+          <input type="password" maxlength=1 id="a" />
+          <input type="password" maxlength=1 id="b" />
+          <input type="password" maxlength=1 id="c" />
+        </div>
+        <div class="numpad">
+          <center>
+            <button class='number' type="button" name="1" onclick="addNumber(this)"><span class="pin_font">1</span> <br> <span class="letter_font">#/!</span></button>
+            <button class='number' type="button" name="2" onclick="addNumber(this)"><span class="pin_font">2</span> <br> <span class="letter_font">abc</span></button>
+            <button class='number' type="button" name="3" onclick="addNumber(this)"><span class="pin_font">3</span> <br> <span class="letter_font">def</span></button>
+          </center>
+          <center>
+            <button class='number' type="button" name="4" onclick="addNumber(this)"><span class="pin_font">4</span> <br> <span class="letter_font">ghi</span></button>
+            <button class='number' type="button" name="5" onclick="addNumber(this)"><span class="pin_font">5</span> <br> <span class="letter_font">jkl</span></button>
+            <button class='number' type="button" name="6" onclick="addNumber(this)"><span class="pin_font">6</span> <br> <span class="letter_font">mno</span></button>
+          </center>
+          <center>
+            <button class='number' type="button" name="7" onclick="addNumber(this)"><span class="pin_font">7</span> <br> <span class="letter_font">pqrs</span></button>
+            <button class='number' type="button" name="8" onclick="addNumber(this)"><span class="pin_font">8</span> <br> <span class="letter_font">tuv</span></button>
+            <button class='number' type="button" name="9" onclick="addNumber(this)"><span class="pin_font">9</span> <br> <span class="letter_font">wxyz</span></button>
+          </center>
+          <center>
+            <button class='number' type="button" name="del" onclick="deleteAll()"><span class="pin_font"><i class="fa fa-times" aria-hidden="true"></i></span></button>
+            <button class='number' type="button" name="0" onclick="addNumber(this)"><span class="pin_font">0</span></button>
+            <button class='number' type="button" name="clear" onclick="removeNumber(this)"><span class="pin_font"><i class="fa fa-angle-double-left" aria-hidden="true"></i></span></button>
+          </center>
+        </div>
+      </center>
+    </div>
+    <script  src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      moveOnMax = function (field, nextFieldID) {
+        if (field.value != '') {
+            document.getElementById(nextFieldID).focus();
+        }
+      }
+
+      addNumber = function (field) {
+        if (!$("#1").val()){
+          $("#1").val(field.name);
+        } else if (!$("#a").val()){
+          $("#a").val(field.name);
+        } else if (!$("#b").val()){
+          $("#b").val(field.name);
+        } else if (!$("#c").val()){
+          $("#c").val(field.name);
+        }
+      }
+
+      deleteAll = function() {
+        $("#1").val('');
+        $("#a").val('');
+        $("#b").val('');
+        $("#c").val('');
+      }
+
+      removeNumber = function() {
+        if ($('#c').val()) {
+          $("#c").val('');
+        } else if ($('#b').val()) {
+          $("#b").val('');
+        } else if ($('#a').val()) {
+          $("#a").val('');
+        } else if ($('#1').val()) {
+          $("#1").val('');
+        }
+      }
+
+      $(document).keyup(function (e) {
+        if (e.keyCode == 8) {
+          removeNumber();
+        }
+      });
+    </script>
+  </body>
+</html>
