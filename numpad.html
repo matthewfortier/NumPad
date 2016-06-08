@@ -36,6 +36,9 @@
             <button class='number' type="button" name="0" onclick="addNumber(this)"><span class="pin_font">0</span></button>
             <button class='number' type="button" name="clear" onclick="removeNumber(this)"><span class="pin_font"><i class="fa fa-angle-double-left" aria-hidden="true"></i></span></button>
           </center>
+          <center>
+            <button class='number' type="button" name="SUM" onclick="sum()"><span class="pin_font">SUM</span></button>
+          </center>
         </div>
       </center>
     </div>
@@ -50,32 +53,32 @@
 
       addNumber = function (field) {
         if (!$("#1").val()){
-          $("#1").val(field.name);
+          $("#1").val(field.name).addClass("dot");
         } else if (!$("#a").val()){
-          $("#a").val(field.name);
+          $("#a").val(field.name).addClass("dot");
         } else if (!$("#b").val()){
-          $("#b").val(field.name);
+          $("#b").val(field.name).addClass("dot");
         } else if (!$("#c").val()){
-          $("#c").val(field.name);
+          $("#c").val(field.name).addClass("dot");
         }
       }
 
       deleteAll = function() {
-        $("#1").val('');
-        $("#a").val('');
-        $("#b").val('');
-        $("#c").val('');
+        $("#1").val('').removeClass("dot");
+        $("#a").val('').removeClass("dot");
+        $("#b").val('').removeClass("dot");
+        $("#c").val('').removeClass("dot");
       }
 
       removeNumber = function() {
         if ($('#c').val()) {
-          $("#c").val('');
+          $("#c").val('').removeClass("dot");
         } else if ($('#b').val()) {
-          $("#b").val('');
+          $("#b").val('').removeClass("dot");
         } else if ($('#a').val()) {
-          $("#a").val('');
+          $("#a").val('').removeClass("dot");
         } else if ($('#1').val()) {
-          $("#1").val('');
+          $("#1").val('').removeClass("dot");
         }
       }
 
@@ -84,6 +87,10 @@
           removeNumber();
         }
       });
+
+      sum = function() {
+        console.log($("#1").val() + $("#a").val() + $("#b").val() + $("#c").val() );
+      }
     </script>
   </body>
 </html>
