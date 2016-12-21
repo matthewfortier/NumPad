@@ -6,10 +6,10 @@ Touch optimized number pad for mobile web applications using HTML, CSS, Javascri
 - Font Awesome http://fontawesome.io/
 
 # Getting Started
-Download or clone this repository
-Include numpad.css and numpad.js in your project
-Include jQuery and Font Awesome in your project
-Add these lines of code to your project where you would like the numpad to be
+- Download or clone this repository
+- Include numpad.css and numpad.js in your project
+- Include jQuery and Font Awesome in your project
+- Add these lines of code to your project where you would like the numpad to be
 ```
 <div class="numpad"></div>
 <input id="pin" name="pin">
