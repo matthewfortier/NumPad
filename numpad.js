@@ -46,6 +46,7 @@ addNumber = function (field) {
     $("#3").val(field.name).addClass("dot");
   } else if (!$("#4").val()){
     $("#4").val(field.name).addClass("dot");
+    $("#pin").val($("#1").val() + $("#2").val() + $("#3").val() + $("#4").val());
   }
 }
 

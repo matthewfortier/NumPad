@@ -17,4 +17,4 @@ Touch optimized number pad for mobile web applications using HTML, CSS, Javascri
 The final pin will be set as the value of the input so it can be used in a form
 
 # Demo
-https://jsfiddle.net/matther2012/y69416u7/6/
+https://jsfiddle.net/matther2012/517neafy/
