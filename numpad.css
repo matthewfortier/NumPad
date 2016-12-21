@@ -1,4 +1,4 @@
-input{
+input {
   padding: 10px;
   border: 1px solid #ddd;
   width: 5px;
@@ -13,26 +13,27 @@ input{
   border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-.dot{
+.dot {
   background-color: rgba(255, 255, 255, 0.50);
   color: rgba(255, 255, 255, 0);
 }
 
-input:focus{
+input:focus {
   background-color: rgba(255, 255, 255, 0.25);
   border: 2px solid rgb(255, 255, 255);
 }
 
-.inputBoxes{
-  padding-top: 10px;
+.inputBoxes {
+  padding-top: 75px;
 }
 
-.numpad{
-  width: 300px;
+.numbers {
+  padding-left: 15%;
+  padding-right: 15%;
   padding-top: 20px;
 }
 
-.number{
+.number {
   background-color: transparent;
   height: 90px;
   width: 90px;
@@ -42,32 +43,33 @@ input:focus{
   margin-bottom: 10px;
 }
 
-.number:active{
+.number:active {
   background-color: rgba(255, 255, 255, 0.25);
   border: 2px solid rgb(255, 255, 255);
 }
 
-.number:focus{
+.number:focus {
   outline: none;
 }
 
-.pin_font{
+.pin_font {
   color: white;
   font-size: 35px;
 }
 
-.letter_font{
+.letter_font {
   color: white;
 }
 
-.container{
- width:500px;
- height:600px;
- margin:0 auto;
- background-image: url(bgblur.jpg);
- position:absolute;
- left:50%;
- top:50%;
- margin-left:-250px;
- margin-top:-250px;
+.numpad {
+  text-align: center;
+  width: 500px;
+  height: 600px;
+  margin: 0 auto;
+  background-image: url("./images/bgblur.jpg");
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -250px;
+  margin-top: -250px;
 }
